@@ -37,7 +37,6 @@ func worker(c chan result)int{
 	go func(){
 		for msg := range c{
 			fmt.Println(msg.name + " has worked here for "+ strconv.Itoa(msg.weeks) + " Weeks and " + strconv.Itoa(msg.days)+ " days for the company")
-	
 		}
 		wgWorkers.Done()
 		}()
